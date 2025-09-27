@@ -19,8 +19,7 @@ app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/overlap', overlapRoutes);
 // .5*overlapscore + .5*sectorScore
 app.use('/api/stock', stockRoutes);
-
-const PORT = "https://nextgen-market-analyzer.onrender.com/";
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
