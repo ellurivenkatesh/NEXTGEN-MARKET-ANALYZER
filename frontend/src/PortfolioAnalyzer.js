@@ -46,10 +46,10 @@ function PortfolioAnalyzer() {
             return;
         }
         try {
-            const portfolioRes = await axios.get(`http://localhost:3000/api/portfolio/${clientId}`);
+            const portfolioRes = await axios.get(`https://nextgen-market-analyzer.onrender.com/api/portfolio/${clientId}`);
             setData(portfolioRes.data);
 
-            const overlapRes = await axios.get(`http://localhost:3000/api/overlap/${clientId}`);
+            const overlapRes = await axios.get(`https://nextgen-market-analyzer.onrender.com/api/overlap/${clientId}`);
             setOverlapData(overlapRes.data);
 
             setTimeout(() => {

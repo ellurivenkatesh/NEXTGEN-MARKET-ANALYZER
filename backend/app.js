@@ -15,12 +15,13 @@ app.use(express.json());
 
 app.use('/api/portfolio', portfolioRoutes);
 
-// Overlap routes (e.g., /api/overlap/:clientId)
+// Overlap routes (e.g., /api/overlap/:clientId)"
 app.use('/api/overlap', overlapRoutes);
 // .5*overlapscore + .5*sectorScore
 app.use('/api/stock', stockRoutes);
 
-const PORT = 3000;
+const PORT = "https://nextgen-market-analyzer.onrender.com/";
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
