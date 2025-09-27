@@ -1,0 +1,252 @@
+/* General Styling */
+.portfolio-container {
+    padding: 30px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    background-color: #0e1a2b;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Main Content Layout (Image on left, Search/Suggestions on right) */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.left-half {
+    width: 50%;
+}
+
+.right-half {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+/* Portfolio Image */
+.portfolio-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4);
+}
+
+/* Top Right Section: Search and Analyze Button */
+.top-search-analyze {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-top: 50px;
+}
+
+/* Search Input and Dropdown */
+.search-container {
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-label {
+    font-size: 16px;
+    color: #a0a0a0;
+}
+
+.client-search-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #00bcd4;
+    background-color: #1a2a3a;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.client-search-input:focus {
+    border-color: #03a9f4;
+}
+
+.client-dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    background-color: #1a2a3a;
+    border: 1px solid #00bcd4;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.client-dropdown li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.client-dropdown li:hover {
+    background-color: #00bcd4;
+    color: #0e1a2b;
+}
+
+/* Analyze Button */
+.analyze-btn {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #00bcd4;
+    border: none;
+    color: #0e1a2b;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.analyze-btn:hover {
+    background-color: #03a9f4;
+}
+
+/* Suggestions Section (now on right side of analysis) */
+.suggestions-section-right {
+    width: 100%;
+    background: rgba(0, 188, 212, 0.15);
+    padding: 15px;
+    border-radius: 10px;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+    margin-top: 30px;
+}
+
+.suggestions-section-right h3 {
+    color: #00ffff;
+    margin-bottom: 10px;
+}
+
+.suggestions-section-right ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+/* Analysis Section (below main-content) */
+.analysis-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.left-half-analysis {
+    width: 45%;
+    text-align: center;
+}
+
+.pie-chart-container {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.right-half-analysis {
+    width: 45%;
+    transform: translateX(5%);
+}
+
+/* Fund Overlap Bars */
+.overlap-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bar-container {
+    font-size: 14px;
+}
+
+.bar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 24px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: #00bcd4;
+    text-align: right;
+    padding-right: 8px;
+    color: #0e1a2b;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+/* General Score Text */
+.score-text {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.summary-text {
+    margin-top: 30px;
+    font-style: italic;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Combined Score Diagram and Text (now on left of analysis) */
+.combined-score-container {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.combined-score-container h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #00ffff;
+    order: 2;
+}
+
+.doughnut-chart-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    order: 1;
+}
+
+.doughnut-chart-wrapper .score-text-center {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #03fce3;
+    z-index: 1;
+}

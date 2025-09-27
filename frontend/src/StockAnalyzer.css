@@ -1,0 +1,202 @@
+/* General container */
+.stock-container {
+  padding: 30px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Flex layout for main content */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Left half for image */
+.left-half {
+  width: 50%;
+}
+
+/* Right half for controls */
+.right-half {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px; /* Moves the selection and dropdowns a little lower */
+}
+
+/* Stock image */
+.stock-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4);
+}
+
+/* Containers for inputs & dropdown */
+.search-container,
+.evaluation-dropdown-container {
+  width: 95%;        /* both containers have same width */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;    /* center alignment */
+}
+
+.search-label {
+  font-size: 16px;
+  color: #a0a0a0;
+  margin-bottom: 5px;
+}
+
+/* Input fields and dropdown */
+.stock-search-input,
+.evaluation-dropdown {
+  width: 100%;
+  padding: 18px 25px;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 2px solid #00bcd4;
+  background-color: #1a2a3a;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.stock-search-input:focus,
+.evaluation-dropdown:focus {
+  border-color: #03a9f4;
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.stock-dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  background-color: #1a2a3a;
+  border: 1px solid #00bcd4;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.stock-dropdown li {
+  padding: 15px 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #ffffff;
+}
+
+.stock-dropdown li:hover {
+  background-color: #00bcd4;
+  color: #0e1a2b;
+}
+
+/* Evaluate button */
+.evaluate-btn {
+  padding: 18px 45px;
+  font-size: 22px;
+  background-color: #00bcd4;
+  border: none;
+  color: #0e1a2b;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 25px;
+}
+
+.evaluate-btn:hover {
+  background-color: #03a9f4;
+}
+
+/* Full-width section for analysis results */
+.full-width-analysis-section {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.full-width-analysis-section h2 {
+  text-align: center;
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+.summary {
+  background: rgba(0, 188, 212, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.summary h3 {
+  color: #00ffff;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.summary p {
+  margin: 0;
+  font-style: italic;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+/* Grid for deep analysis cards */
+.analysis-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.analysis-card {
+  background: rgba(0, 188, 212, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.analysis-card h4 {
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+
+.analysis-card p {
+  margin: 0;
+  color: #e0e0e0;
+}
+
+#colo {
+  color: #00ffff;
+}
+
+/* Responsive: stack left/right halves on smaller screens */
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .left-half,
+  .right-half {
+    width: 100%;
+  }
+}

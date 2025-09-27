@@ -1,0 +1,78 @@
+.app-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #0e1a2b, #1e3c72);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav button {
+  background-color: transparent;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+  padding: 12px 24px; /* slightly bigger */
+  margin-left: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 16px; /* slightly bigger */
+}
+
+nav button:hover {
+  background-color: #00bcd4;
+  color: #0e1a2b;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-image {
+  width: 95%;           /* increase from 90% */
+  max-width: 1200px;    /* increase max width */
+  height: auto;
+  margin-bottom: 40px;  /* slightly more spacing */
+  border-radius: 10px;
+  box-shadow: 0 12px 35px rgba(0, 188, 212, 0.4); /* slightly stronger shadow */
+  display: block;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 35px;            /* slightly bigger gap */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-buttons button {
+  background-color: #00bcd4;
+  border: none;
+  color: #0e1a2b;
+  padding: 25px 50px;  /* bigger buttons */
+  font-size: 20px;      /* bigger text */
+  border-radius: 10px;  /* slightly rounder */
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 10px 25px rgba(0, 188, 212, 0.5); /* stronger shadow */
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.home-buttons button:hover {
+  background-color: #03a9f4;
+  transform: translateY(-3px); /* slightly higher lift on hover */
+}
